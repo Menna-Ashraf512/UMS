@@ -1,17 +1,23 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { SharedRoutingModule } from './shared-routing.module';
-import { SharedComponent } from './shared.component';
+import {HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
 
 
 @NgModule({
-  declarations: [
-    SharedComponent
-  ],
+  declarations: [],
   imports: [
     CommonModule,
-    SharedRoutingModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    ToastrModule
+
+  ],
+  exports:[
+   HttpClientModule,FormsModule,ReactiveFormsModule,ToastrModule
   ]
 })
-export class SharedModule { }
+export class SharedModule { 
+}

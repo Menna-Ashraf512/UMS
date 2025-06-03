@@ -2,12 +2,28 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MasterComponent } from './master.component';
 import { RouterModule, Routes } from '@angular/router';
+import { AddUserComponent } from './add-user/add-user.component';
+import { UsersListComponent } from './users-list/users-list.component';
+import { ProfileComponent } from './profile/profile.component';
+import { UpdateUserComponent } from './update-user/update-user.component';
 
-const routes: Routes = [{ path: '', component: MasterComponent }];
+const routes: Routes = [
+  { path: '', component: MasterComponent, children:[
+    {path:'',redirectTo:'userList',pathMatch:'full'},
+    {path:'userList',component:UsersListComponent,title:'Users List page'},
+    {path:'profile',component:ProfileComponent,title:'Profile page'},
+    {path:'addUser',component:AddUserComponent,title:'Add page'},
+    {path:'updateUser',component:UpdateUserComponent,title:'Update page'}
+  ]}
+];
 
 @NgModule({
   declarations: [
-    MasterComponent
+    MasterComponent,
+    AddUserComponent,
+    UsersListComponent,
+    ProfileComponent,
+    UpdateUserComponent
   ],
   imports: [
     CommonModule,
