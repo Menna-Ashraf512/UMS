@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MasterComponent } from './master.component';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterModule, Routes } from '@angular/router';
 import { AddUserComponent } from './add-user/add-user.component';
 import { UsersListComponent } from './users-list/users-list.component';
 import { ProfileComponent } from './profile/profile.component';
 import { UpdateUserComponent } from './update-user/update-user.component';
+import { SideBarComponent } from './components/side-bar/side-bar.component';
 
 const routes: Routes = [
   { path: '', component: MasterComponent, children:[
@@ -23,10 +24,14 @@ const routes: Routes = [
     AddUserComponent,
     UsersListComponent,
     ProfileComponent,
-    UpdateUserComponent
+    UpdateUserComponent,
+    SideBarComponent,
+
   ],
   imports: [
     CommonModule,
+    RouterLink,
+    RouterLinkActive,
     RouterModule.forChild(routes)
   ]
 })

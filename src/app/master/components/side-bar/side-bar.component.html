@@ -1,0 +1,32 @@
+<div class="p-4 sideBar">
+    <div class="d-flex flex-column justify-content-between align-items-center">
+        <div class="logo align-self-start">
+            <h1>UMS</h1>
+        </div>
+        <div class="list d-flex flex-column justify-content-center align-items-center">
+            <div class="header_list d-flex flex-column justify-content-center align-items-center gap-2">
+                <img src="assets/images/pexels-danxavier-1239291.jpg" alt="portfolio">
+                <h2>Menna Ashraf</h2>
+                <p>Admin</p>
+            </div>
+            <ul class="d-flex flex-column list-unstyled gap-3">
+                <li routerLinkActive="bg_active" class="py-2 px-4 d-flex align-items-center">
+                    <a routerLink="updateUser"><i class="bi bi-house-door me-4 fs-5"></i> Home</a>
+                </li>
+                <li routerLinkActive="bg_active" class="py-2 px-4 d-flex align-items-center">
+                    <a routerLink="userList"><i class="bi bi-bookmark me-4 fs-5"></i> Users</a>
+                </li>
+                <li routerLinkActive="bg_active" class="py-2 px-4 d-flex align-items-center">
+                    <a routerLink="addUser"><i class="bi bi-mortarboard me-4 fs-5"></i> Add User</a>
+                </li>
+                <li routerLinkActive="bg_active"  class="py-2 px-4 d-flex align-items-center">
+                    <a routerLink="profile"><i class="bi bi-person-square me-4 fs-5"></i> Profile</a>
+                </li>
+            </ul>
+
+        </div>
+        <div class="logOut">
+            <a (click)="logOut()" class="">Log Out <i class="bi bi-box-arrow-right ms-4"></i></a>
+        </div>
+    </div>
+</div>

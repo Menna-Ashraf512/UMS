@@ -35,9 +35,9 @@ export class LoginComponent {
       },
       complete: () => {
         this.toastr.success('Hello world!', 'Success!');
-        setTimeout(() => {
+        // setTimeout(() => {
           this.router.navigate(['/users/userList']);
-        }, 3000);
+        // }, 3000);
         console.log('you are sign in');
       },
     });

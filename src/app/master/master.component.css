@@ -1,0 +1,32 @@
+.parent { 
+height: auto;
+display: grid; 
+  grid-auto-columns: 1fr; 
+  grid-template-columns: 1fr 0.9fr 1.1fr 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "sideBar navBar navBar navBar navBar navBar"
+    "sideBar main main main main main"
+    "sideBar main main main main main"
+    "sideBar main main main main main"
+    "sideBar main main main main main"
+    "sideBar main main main main main"
+    "sideBar main main main main main"
+    "sideBar main main main main main"
+    "sideBar main main main main main"
+    "sideBar main main main main main"
+    "sideBar main main main main main"
+    "sideBar main main main main main"; 
+}
+
+.sideBar { 
+  grid-area: sideBar; 
+  min-height:100vh 
+}
+
+.navBar { grid-area: navBar; }
+
+.main { 
+  grid-area: main;
+}
