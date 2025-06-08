@@ -25,8 +25,26 @@ display: grid;
   min-height:100vh 
 }
 
-.navBar { grid-area: navBar; }
+.navBar {
+   grid-area: navBar;
+   background:#FFFFFF;
+   & i{
+    color: #C4C4C4;
+   }
+   & .search {
+  
+    & input{
+      border: none;
+      outline-color:transparent;
+
+    }
+    &:focus-visible{
+      outline-color:transparent;
+    }
+  }
+  }
 
 .main { 
   grid-area: main;
+  background: #F8F8F8;
 }
