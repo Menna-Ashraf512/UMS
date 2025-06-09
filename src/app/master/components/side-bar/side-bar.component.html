@@ -1,12 +1,12 @@
 <div class="p-4 sideBar">
     <div class="d-flex flex-column justify-content-between align-items-center">
-        <div class="logo align-self-start">
+        <div class="logo d-flex justify-content-between w-100">
             <h1>UMS</h1>
         </div>
         <div class="list d-flex flex-column justify-content-center align-items-center">
             <div class="header_list d-flex flex-column justify-content-center align-items-center gap-2">
-                <img src="assets/images/pexels-danxavier-1239291.jpg" alt="portfolio">
-                <h2>Menna Ashraf</h2>
+                <img [src]="userImage" alt="portfolio">
+                <h2>{{userName}}</h2>
                 <p>Admin</p>
             </div>
             <ul class="d-flex flex-column list-unstyled gap-3">

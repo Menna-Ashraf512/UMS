@@ -1,1 +1,75 @@
-<p>add-user works!</p>
+<section>
+    <div class="header d-flex justify-content-between align-items-center mb-5 py-2 mx-4 border-bottom">
+        <h3>Add Users</h3>
+    </div>
+    <div class="pt-2">
+        <div class="container">
+            <div class="card py-3 px-5  border-0 shadow">
+                <form [formGroup]="AddForm" class="pt-5 d-flex flex-column" (ngSubmit)="sendData(AddForm)">
+                    <div class="d-flex flex-column  flex-md-row gap-5  mb-5">
+                        <div class="col">
+                            <label for="firstName" class="form-label text-muted">First Name</label>
+                            <input formControlName="firstName" type="text" class="form-control" id="firstName"
+                                placeholder="Enter your First Name">
+                            <p class="alert alert-danger" role="alert"
+                                *ngIf="AddForm.get('firstName')?.touched && AddForm.get('firstName')?.errors">
+                                first Name is required
+                            </p>
+                        </div>
+                        <div class="col">
+                            <label for="lastName" class="form-label text-muted">Last Name</label>
+                            <input formControlName="lastName" type="text" class="form-control" id="lastName"
+                                placeholder="Enter your Last Name">
+                            <p class="alert alert-danger" role="alert"
+                                *ngIf="AddForm.get('lastName')?.touched && AddForm.get('lastName')?.errors">
+                                last Name is required
+                            </p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column  flex-md-row gap-5 mb-5">
+                        <div class="col">
+                            <label for="email" class="form-label text-muted">Email</label>
+                            <input formControlName="email" type="email" class="form-control" id="email"
+                                placeholder="Enter your Email">
+                            <p class="alert alert-danger" role="alert"
+                                *ngIf="AddForm.get('email')?.touched && AddForm.get('email')?.errors">
+                                email is required
+                            </p>
+                        </div>
+                        <div class="col">
+                            <label for="age" class="form-label text-muted">Age</label>
+                            <input formControlName="age" type="number" class="form-control" id="age"
+                                placeholder="Enter your Age">
+                            <p class="alert alert-danger" role="alert"
+                                *ngIf="AddForm.get('age')?.touched && AddForm.get('age')?.errors">
+                                Age is required
+                            </p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column  flex-md-row gap-5 mb-5">
+                        <div class="col">
+                            <label for="phoneNumber" class="form-label text-muted">Phone Number</label>
+                            <input formControlName="phone" type="tel" class="form-control" id="phoneNumber"
+                                placeholder="Enter your Phone Number">
+                            <p class="alert alert-danger" role="alert"
+                                *ngIf="AddForm.get('phone')?.touched && AddForm.get('phone')?.errors">
+                                Phone is required
+                            </p>
+                        </div>
+                        <div class="col">
+                            <label for="birthDate" class="form-label text-muted">birth Date</label>
+                            <input formControlName="birthDate" type="text" class="form-control" id="birthDate"
+                                placeholder="Enter your birth Date">
+                            <p class="alert alert-danger" role="alert"
+                                *ngIf="AddForm.get('birthDate')?.touched && AddForm.get('birthDate')?.errors">
+                                birthDate is required
+                            </p>
+                        </div>
+                    </div>
+                    <button type="submit" [disabled]="AddForm.invalid"
+                        class="btn w-50 text-white align-self-center mb-4">Save</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

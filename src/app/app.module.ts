@@ -6,11 +6,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
+import { authGuard } from './Guards/auth.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: 'auth', pathMatch: 'full' },
   { path: 'auth', loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule) },
-  { path: 'users', loadChildren: () => import('./master/master.module').then(m => m.MasterModule) }
+  { path: 'users', loadChildren: () => import('./master/master.module').then(m => m.MasterModule) ,canActivate:[authGuard]}
 ];
 
 @NgModule({

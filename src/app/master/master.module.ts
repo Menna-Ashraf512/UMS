@@ -7,6 +7,8 @@ import { UsersListComponent } from './users-list/users-list.component';
 import { ProfileComponent } from './profile/profile.component';
 import { UpdateUserComponent } from './update-user/update-user.component';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { SharedModule } from '../shared/shared.module';
 
 const routes: Routes = [
   { path: '', component: MasterComponent, children:[
@@ -32,6 +34,8 @@ const routes: Routes = [
     CommonModule,
     RouterLink,
     RouterLinkActive,
+    NgxPaginationModule,
+    SharedModule,
     RouterModule.forChild(routes)
   ]
 })

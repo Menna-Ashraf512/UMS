@@ -1,22 +1,24 @@
-<div class="parent">
-<div class="sideBar">
-<app-side-bar></app-side-bar>
-</div>
-<div class="navBar">
-    <div class="d-flex justify-content-between align-items-center px-5 h-100">
-        <span class="back"><i class="bi bi-skip-backward-circle fs-5"></i></span>
-        <div class="d-flex gap-4 align-items-center">
-<div class="search border py-2 rounded-3 px-3">
-            <input type="search" placeholder="search....">
-            <i class="bi bi-search"></i>
-</div>
-            <i class="bi bi-bell fs-5"></i>
+<!-- layout.component.html -->
+<div class="layout">
+    <div class="sidebar">
+        <app-side-bar></app-side-bar>
+    </div>
+    <div class="content">
+        <div class="navBar">
+            <div class="d-flex justify-content-between align-items-center h-100 px-5">
+                <span class="back"><i class="bi bi-skip-backward-circle fs-5"></i></span>
+                <div class="d-flex gap-4 align-items-center">
+                    <div class="search border py-2 rounded-3 px-3">
+                        <input type="search" placeholder="search....">
+                        <i class="bi bi-search"></i>
+                    </div>
+                    <i class="bi bi-bell fs-5"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="main">
+            <router-outlet></router-outlet>
         </div>
     </div>
 </div>
-<div class="main">
-<router-outlet></router-outlet>     
-</div>
-</div>
-
-

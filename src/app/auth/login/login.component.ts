@@ -26,21 +26,18 @@ export class LoginComponent {
   send(data: FormGroup) {
     this._authServiceService.signIn(data.value).subscribe({
       next: (res) => {
-        console.log(res);
+        localStorage.setItem('userToken',res.accessToken)
+        localStorage.setItem('firstName',res.firstName)
+        localStorage.setItem('image',res.image)
         this.loginForm.reset();
       },
       error: (err) => {
-        console.log(err);
         this.toastr.error(err.error.message, 'Sorry');
       },
       complete: () => {
         this.toastr.success('Hello world!', 'Success!');
-        // setTimeout(() => {
           this.router.navigate(['/users/userList']);
-        // }, 3000);
-        console.log('you are sign in');
       },
     });
-    console.log(data.value);
   }
 }
