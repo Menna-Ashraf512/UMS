@@ -16,7 +16,7 @@ const routes: Routes = [
     {path:'userList',component:UsersListComponent,title:'Users List page'},
     {path:'profile',component:ProfileComponent,title:'Profile page'},
     {path:'addUser',component:AddUserComponent,title:'Add page'},
-    {path:'updateUser',component:UpdateUserComponent,title:'Update page'}
+    {path:'updateUser/:id',component:AddUserComponent,title:'Update page'}
   ]}
 ];
 
