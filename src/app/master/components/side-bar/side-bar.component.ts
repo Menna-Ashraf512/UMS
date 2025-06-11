@@ -7,15 +7,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./side-bar.component.css']
 })
 export class SideBarComponent {
-  isSidebarClosed = false;
   userImage=localStorage.getItem('image');
   userName=localStorage.getItem('firstName');
 
   constructor(private router:Router){}
 
-  toggleSidebar() {
-    this.isSidebarClosed = !this.isSidebarClosed;
-  }
+
   logOut(){
     localStorage.removeItem('userToken');
     localStorage.removeItem('image');

@@ -3,20 +3,23 @@ import { CommonModule } from '@angular/common';
 import {HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    
+  ],
   imports: [
     CommonModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    ToastrModule
-
+    ToastrModule,
+    NotfoundComponent
   ],
   exports:[
-   HttpClientModule,FormsModule,ReactiveFormsModule,ToastrModule
+   HttpClientModule,FormsModule,ReactiveFormsModule,ToastrModule,NotfoundComponent
   ]
 })
 export class SharedModule { 
