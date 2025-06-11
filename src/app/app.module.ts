@@ -13,7 +13,6 @@ const routes: Routes = [
   { path: '', redirectTo: 'auth', pathMatch: 'full' },
   { path: 'auth', loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule) },
   { path: 'users', loadChildren: () => import('./master/master.module').then(m => m.MasterModule) ,canActivate:[authGuard]},
-  {path:'**',component:NotfoundComponent,title:'NotFound page'}
 ];
 
 @NgModule({
