@@ -1,43 +1,73 @@
 <section>
-    <div class="container h-100">
-        <div class=" h-100 d-flex justify-content-center align-items-center">
-            <div class="card px-4 py-5 align-items-center">
-                <h1>User Management System</h1>
-                <h2 class="text-uppercase">Sign In</h2>
-                <p>Enter your credentials to access your account</p>
-                <form [formGroup]="loginForm" class="align-self-stretch my-4" autocomplete="off">
-                    <div class="mb-4">
-                        <label for="username" class="form-label text-muted">username</label>
-                        <input formControlName="username" type="username" class="form-control" id="username"
-                            placeholder="Enter your username" autocomplete="username">
-                    </div>
-                    <div class="alert alert-danger"
-                        *ngIf="loginForm.get('username')?.touched && loginForm.get('username')?.errors">
-                        <small *ngIf="loginForm.get('username')?.errors?.['required']">
-                            username is required
-                        </small>
-                        <small *ngIf="loginForm.get('username')?.errors?.['username']">
-                            Please enter invalid username 
-                        </small>
-                    </div>
-                    <div class="mb-3">
-                        <label for="password" class="form-label text-muted">Password</label>
-                        <input formControlName="password" type="password" class="form-control" id="password"
-                            placeholder="Enter your password" autocomplete="new-password">
-                    </div>
-                    <div class="alert alert-danger"
-                        *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.errors">
-                        <small *ngIf="loginForm.get('password')?.errors?.['required']">
-                            Password is required
-                        </small>
-                        <small *ngIf="loginForm.get('password')?.errors?.['pattern']">
-                            Please enter a password with at least 6 characters
-                        </small>
-                    </div>
-                    <button [disabled]="loginForm.invalid" class="btn w-100 mt-3" (click)="send(loginForm)">SIGN
-                        IN</button>
-                </form>
-            </div>
-        </div>
+  <div class="container h-100">
+<div class="d-flex flex-column justify-content-center h-100"> 
+      <div class="flipswitch align-self-end mt-3">
+      <input type="checkbox" class="flipswitch-cb" id="langToggle" (change)="changeLang()" [checked]="lang === 'en'">
+      <label class="flipswitch-label" for="langToggle">
+        <div class="flipswitch-inner"></div>
+        <div class="flipswitch-switch"></div>
+      </label>
     </div>
+    <div class="h-100 d-flex justify-content-center align-items-center">
+      <div class="card px-4 py-5 align-items-center">
+        <h1>User Management System</h1>
+
+        <h2 class="text-uppercase">{{ "login" | translate }}</h2>
+        <p>{{ "header" | translate }}</p>
+
+        <form [formGroup]="loginForm" class="align-self-stretch my-4" autocomplete="off">
+          <div class="mb-4">
+            <label for="username" class="form-label text-muted">
+              {{ "userName" | translate }}
+            </label>
+            <input
+              formControlName="username"
+              type="text"
+              class="form-control"
+              id="username"
+              [placeholder]="'placeholderUserName' | translate"
+              autocomplete="username"
+            />
+          </div>
+
+          <div class="alert alert-danger" *ngIf="loginForm.get('username')?.touched && loginForm.get('username')?.errors">
+            <small *ngIf="loginForm.get('username')?.errors?.['required']">
+              {{ "usernameRequired" | translate }}
+            </small>
+            <small *ngIf="loginForm.get('username')?.errors?.['username']">
+              {{ "invalidUsername" | translate }}
+            </small>
+          </div>
+
+          <div class="mb-3">
+            <label for="password" class="form-label text-muted">
+              {{ "password" | translate }}
+            </label>
+            <input
+              formControlName="password"
+              type="password"
+              class="form-control"
+              id="password"
+              [placeholder]="'placeholderPassword' | translate"
+              autocomplete="new-password"
+            />
+          </div>
+
+          <div class="alert alert-danger" *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.errors">
+            <small *ngIf="loginForm.get('password')?.errors?.['required']">
+              {{ "passwordRequired" | translate }}
+            </small>
+            <small *ngIf="loginForm.get('password')?.errors?.['pattern']">
+              {{ "invalidPassword" | translate }}
+            </small>
+          </div>
+
+          <button [disabled]="loginForm.invalid" class="btn w-100 mt-3" (click)="send(loginForm)">
+            {{ "signIn" | translate }}
+          </button>
+        </form>
+      </div>
+    </div>
+</div>
+  </div>
 </section>

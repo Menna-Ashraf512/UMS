@@ -1,0 +1,66 @@
+{
+  "login": "Sign In",
+  "header": "Enter your credentials to access your account",
+  "userName": "Username",
+  "placeholderUserName": "Enter your username",
+  "password": "Password",
+  "placeholderPassword": "Enter your password",
+  "errors": {
+    "requiredUsername": "Username is required",
+    "invalidUsername": "Please enter a valid username",
+    "requiredPassword": "Password is required",
+    "invalidPassword": "Please enter a password with at least 6 characters"
+  },
+  "sidebar": {
+    "home": "Home",
+    "users": "Users",
+    "addUser": "Add User",
+    "profile": "Profile",
+    "logout": "Log Out",
+    "admin": "Admin"
+  },
+  "addUser": {
+    "titleAdd": "Add Users",
+    "titleUpdate": "Update Users",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "age": "Age",
+    "phone": "Phone Number",
+    "birthDate": "Birth Date",
+    "placeholderFirstName": "Enter your First Name",
+    "placeholderLastName": "Enter your Last Name",
+    "placeholderEmail": "Enter your Email",
+    "placeholderAge": "Enter your Age",
+    "placeholderPhone": "Enter your Phone Number",
+    "placeholderBirthDate": "Enter your Birth Date",
+    "requiredFirstName": "First Name is required",
+    "requiredLastName": "Last Name is required",
+    "requiredEmail": "Email is required",
+    "requiredAge": "Age is required",
+    "requiredPhone": "Phone is required",
+    "requiredBirthDate": "Birth Date is required",
+    "save": "Save",
+    "update": "Update"
+  },
+  "userList": {
+    "title": "Users List",
+    "addNew": "Add New User",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "enroll": "Enroll Number",
+    "date": "Date of admission",
+    "edit": "Edit",
+    "delete": "Delete"
+  },
+  "profile": {
+    "title": "Profile",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "age": "Age",
+    "phone": "Phone Number",
+    "birthDate": "Birth Date"
+  }
+}

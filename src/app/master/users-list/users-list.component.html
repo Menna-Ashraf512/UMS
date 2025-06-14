@@ -1,38 +1,40 @@
 <section class="py-2 px-4">
-    <div class="header d-flex justify-content-between align-items-center pb-2 border-bottom">
-        <h3>Users List</h3>
-        <button class="btn py-3 px-5" routerLink="/users/addUser">Add New User</button>
-    </div>
-<table class="table align-middle my-4 custom-table ">
-  <thead class="table-light">
-    <tr>
-      <th> </th>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Phone</th>
-      <th>Enroll Number</th>
-      <th>Date of admission</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr class="bg-white shadow-sm" *ngFor="let user of usersList | paginate: { itemsPerPage: 4, currentPage: page }">
-    <td class="text-center">
-        <img [src]="user.image" alt="User">
-    </td>
-      <td>{{user.firstName}}</td>
-      <td> {{user.email}} </td>
-      <td> {{user.phone}} </td>
-      <td> {{user.ip}}</td>
-      <td>{{user.birthDate|date:'d-MMM, y'}}</td>
-      <td class="gap-3 text-center">
-        <i class="bi bi-pencil text-warning me-4" role="button" [routerLink]="['/users/updateUser',user.id]"></i>
-        <i class="bi bi-trash3 text-warning" role="button" (click)="deleteData(user.id)"></i>
-      </td>
-    </tr>
-  </tbody>
-</table>
-<div class="d-flex justify-content-center">
-<pagination-controls (pageChange)="page = $event"></pagination-controls>
-</div>
+  <div class="header d-flex justify-content-between align-items-center pb-2 border-bottom">
+    <h3>{{ "userList.title" | translate }}</h3>
+    <button class="btn py-3 px-5" routerLink="/users/addUser">{{ "userList.addNew" | translate }}</button>
+  </div>
+
+  <table class="table align-middle my-4 custom-table">
+    <thead class="table-light">
+      <tr>
+        <th></th>
+        <th>{{ "userList.name" | translate }}</th>
+        <th>{{ "userList.email" | translate }}</th>
+        <th>{{ "userList.phone" | translate }}</th>
+        <th>{{ "userList.enroll" | translate }}</th>
+        <th>{{ "userList.date" | translate }}</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="bg-white shadow-sm" *ngFor="let user of usersList | paginate: { itemsPerPage: 4, currentPage: page }">
+        <td class="text-center">
+          <img [src]="user.image" alt="User">
+        </td>
+        <td>{{ user.firstName}}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.phone }}</td>
+        <td>{{ user.ip }}</td>
+        <td>{{ user.birthDate | date: 'd-MMM, y' }}</td>
+        <td class="gap-3 text-center">
+          <i class="bi bi-pencil text-warning me-4" role="button" [routerLink]="['/users/updateUser', user.id]"></i>
+          <i class="bi bi-trash3 text-warning" role="button" (click)="deleteData(user.id)"></i>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="d-flex justify-content-center">
+    <pagination-controls (pageChange)="page = $event"></pagination-controls>
+  </div>
 </section>

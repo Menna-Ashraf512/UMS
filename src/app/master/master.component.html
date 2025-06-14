@@ -3,7 +3,8 @@
     <div class="sidebar" *ngIf="isSidebarOpen">
         <app-side-bar></app-side-bar>
     </div>
-    <button class="btn" (click)="toggleSidebar()" ><i [class]="isSidebarOpen?'bi bi-chevron-double-left':'bi bi-chevron-double-right'"></i></button>
+    <button class="btn" (click)="toggleSidebar()"><i
+            [class]="isSidebarOpen?'bi bi-chevron-double-left':'bi bi-chevron-double-right'"></i></button>
     <div class="content" [class.full-width]="!isSidebarOpen">
         <div class="navBar">
             <div class="d-flex justify-content-between align-items-center h-100 px-5">
@@ -14,7 +15,16 @@
                         <i class="bi bi-search"></i>
                     </div>
                     <i class="bi bi-bell fs-5"></i>
+                    <div class="flipswitch">
+                        <input type="checkbox" class="flipswitch-cb" id="langToggle" (change)="changeLang()"
+                            [checked]="lang === 'en'">
+                        <label class="flipswitch-label" for="langToggle">
+                            <div class="flipswitch-inner"></div>
+                            <div class="flipswitch-switch"></div>
+                        </label>
+                    </div>
                 </div>
+
             </div>
         </div>
 

@@ -4,6 +4,7 @@ import {HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 @NgModule({
@@ -16,10 +17,11 @@ import { NotfoundComponent } from './notfound/notfound.component';
     FormsModule,
     ReactiveFormsModule,
     ToastrModule,
-    NotfoundComponent
+    NotfoundComponent,
+    TranslateModule
   ],
   exports:[
-   HttpClientModule,FormsModule,ReactiveFormsModule,ToastrModule,NotfoundComponent
+   HttpClientModule,FormsModule,ReactiveFormsModule,ToastrModule,NotfoundComponent,TranslateModule
   ]
 })
 export class SharedModule { 

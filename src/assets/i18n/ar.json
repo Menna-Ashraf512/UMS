@@ -1,0 +1,72 @@
+{
+  "login": "تسجيل دخول",
+  "header": "أدخل بيانات الخاصة بك للوصول إلى حسابك",
+  "userName": "اسم المستخدم",
+  "placeholderUserName": "أدخل اسم المستخدم الخاص بك",
+  "password": "كلمة المرور",
+  "placeholderPassword": "أدخل كلمة المرور الخاصة بك",
+  "errors": {
+    "requiredUsername": "اسم المستخدم مطلوب",
+    "invalidUsername": "يرجى إدخال اسم مستخدم صالح",
+    "requiredPassword": "كلمة المرور مطلوبة",
+    "invalidPassword": "يرجى إدخال كلمة مرور لا تقل عن 6 أحرف"
+  },
+  "sidebar": {
+    "home": "الرئيسية",
+    "users": "المستخدمين",
+    "addUser": "إضافة مستخدم",
+    "profile": "الملف الشخصي",
+    "logout": "تسجيل الخروج",
+    "admin": "مسؤول"
+  },
+  "addUser": {
+    "titleAdd": "إضافة مستخدم",
+    "titleUpdate": "تحديث مستخدم",
+    "firstName": "الاسم الأول",
+    "lastName": "اسم العائلة",
+    "email": "البريد الإلكتروني",
+    "age": "العمر",
+    "phone": "رقم الهاتف",
+    "birthDate": "تاريخ الميلاد",
+    "placeholderFirstName": "أدخل الاسم الأول",
+    "placeholderLastName": "أدخل اسم العائلة",
+    "placeholderEmail": "أدخل بريدك الإلكتروني",
+    "placeholderAge": "أدخل عمرك",
+    "placeholderPhone": "أدخل رقم هاتفك",
+    "placeholderBirthDate": "أدخل تاريخ ميلادك",
+    "requiredFirstName": "الاسم الأول مطلوب",
+    "requiredLastName": "اسم العائلة مطلوب",
+    "requiredEmail": "البريد الإلكتروني مطلوب",
+    "requiredAge": "العمر مطلوب",
+    "requiredPhone": "رقم الهاتف مطلوب",
+    "requiredBirthDate": "تاريخ الميلاد مطلوب",
+    "save": "حفظ",
+    "update": "تحديث"
+  },
+  "userList": {
+    "title": "قائمة المستخدمين",
+    "addNew": "إضافة مستخدم جديد",
+    "name": "الاسم",
+    "email": "البريد الإلكتروني",
+    "phone": "الهاتف",
+    "enroll": "رقم التسجيل",
+    "date": "تاريخ القبول",
+    "edit": "تعديل",
+    "delete": "حذف"
+  },
+  "profile": {
+    "title": "الملف الشخصي",
+    "firstName": "الاسم الأول",
+    "lastName": "اسم العائلة",
+    "email": "البريد الإلكتروني",
+    "age": "العمر",
+    "phone": "رقم الهاتف",
+    "birthDate": "تاريخ الميلاد",
+    "placeholderFirstName": "أدخل الاسم الأول",
+    "placeholderLastName": "أدخل اسم العائلة",
+    "placeholderEmail": "أدخل بريدك الإلكتروني",
+    "placeholderAge": "أدخل عمرك",
+    "placeholderPhone": "أدخل رقم هاتفك",
+    "placeholderBirthDate": "أدخل تاريخ ميلادك"
+  }
+}

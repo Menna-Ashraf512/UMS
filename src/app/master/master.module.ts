@@ -10,6 +10,7 @@ import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { SharedModule } from '../shared/shared.module';
 import { NotfoundComponent } from '../shared/notfound/notfound.component';
+import { TranslateModule} from '@ngx-translate/core';
 
 const routes: Routes = [
   { path: '', component: MasterComponent, children:[
@@ -38,7 +39,10 @@ const routes: Routes = [
     RouterLinkActive,
     NgxPaginationModule,
     SharedModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    
   ]
 })
-export class MasterModule { }
+export class MasterModule { 
+
+}

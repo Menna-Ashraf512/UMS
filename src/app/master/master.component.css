@@ -46,3 +46,72 @@
 .back{
   cursor: pointer;
 }
+.flipswitch {
+  position: relative;
+  width: 100px;
+}
+
+.flipswitch input[type=checkbox] {
+  display: none;
+}
+
+.flipswitch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid #999999;
+  border-radius: 50px;
+}
+
+.flipswitch-inner {
+  width: 200%;
+  margin-left: -100%;
+  transition: margin 0.3s ease-in 0s;
+  display: flex;
+}
+
+.flipswitch-inner:before,
+.flipswitch-inner:after {
+  width: 50%;
+  height: 30px;
+  line-height: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: Trebuchet, Arial, sans-serif;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.flipswitch-inner:before {
+  content: "EN";
+  background-color: #437A99;
+  color: white;
+}
+
+.flipswitch-inner:after {
+  content: "AR";
+  background-color: white;
+  color: #437A99;
+}
+
+.flipswitch-switch {
+  width: 35px;
+  margin: -2.5px;
+  background: white;
+  border: 1px solid #999999;
+  border-radius: 50px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 67px;
+  transition: all 0.3s ease-in 0s;
+}
+
+.flipswitch-cb:checked + .flipswitch-label .flipswitch-inner {
+  margin-left: 0;
+}
+
+.flipswitch-cb:checked + .flipswitch-label .flipswitch-switch {
+  right: 0;
+}
+

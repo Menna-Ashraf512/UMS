@@ -6,6 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
 import { NotfoundComponent } from '../shared/notfound/notfound.component';
+import { TranslateModule } from '@ngx-translate/core';
 const routes: Routes = [
   { path: '', component: AuthComponent, children:[
     {path:'',redirectTo:'login',pathMatch:'full'},
@@ -25,6 +26,7 @@ const routes: Routes = [
     ReactiveFormsModule,
     SharedModule,
     RouterModule.forChild(routes),
+    TranslateModule
   ]
 })
 export class AuthModule { }
