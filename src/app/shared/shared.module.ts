@@ -5,11 +5,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { TranslateModule } from '@ngx-translate/core';
+import { UserSearchPipe } from '../pipes/user-search.pipe';
 
 
 @NgModule({
   declarations: [
-    
   ],
   imports: [
     CommonModule,

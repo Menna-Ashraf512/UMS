@@ -1,10 +1,12 @@
 {
+  "nameProject":"User Management System",
   "login": "Sign In",
   "header": "Enter your credentials to access your account",
   "userName": "Username",
   "placeholderUserName": "Enter your username",
   "password": "Password",
   "placeholderPassword": "Enter your password",
+  "search":"search",
   "errors": {
     "requiredUsername": "Username is required",
     "invalidUsername": "Please enter a valid username",

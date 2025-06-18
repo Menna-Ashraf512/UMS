@@ -11,6 +11,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { SharedModule } from '../shared/shared.module';
 import { NotfoundComponent } from '../shared/notfound/notfound.component';
 import { TranslateModule} from '@ngx-translate/core';
+import { UserSearchPipe } from '../pipes/user-search.pipe';
 
 const routes: Routes = [
   { path: '', component: MasterComponent, children:[
@@ -31,6 +32,7 @@ const routes: Routes = [
     ProfileComponent,
     UpdateUserComponent,
     SideBarComponent,
+    UserSearchPipe,
 
   ],
   imports: [

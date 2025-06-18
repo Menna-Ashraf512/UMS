@@ -17,7 +17,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr class="bg-white shadow-sm" *ngFor="let user of usersList | paginate: { itemsPerPage: 4, currentPage: page }">
+      <tr class="bg-white shadow-sm" *ngFor="let user of usersList | Search: searchText | paginate: { itemsPerPage: 4, currentPage: page }">
         <td class="text-center">
           <img [src]="user.image" alt="User">
         </td>
@@ -27,13 +27,12 @@
         <td>{{ user.ip }}</td>
         <td>{{ user.birthDate | date: 'd-MMM, y' }}</td>
         <td class="gap-3 text-center">
-          <i class="bi bi-pencil text-warning me-4" role="button" [routerLink]="['/users/updateUser', user.id]"></i>
+          <i class="bi bi-pencil text-warning mx-4" role="button" [routerLink]="['/users/updateUser', user.id]"></i>
           <i class="bi bi-trash3 text-warning" role="button" (click)="deleteData(user.id)"></i>
         </td>
       </tr>
     </tbody>
   </table>
-
   <div class="d-flex justify-content-center">
     <pagination-controls (pageChange)="page = $event"></pagination-controls>
   </div>

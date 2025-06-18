@@ -1,6 +1,6 @@
 section{
     background: linear-gradient(71.17deg, #FEAF00 19.35%, #F8D442 90.12%);
-    height: 100vh;
+    min-height:100vh;
 }
 .card{
     border-radius: 20px;
@@ -18,7 +18,7 @@ h1::before{
     display: inline-block; 
     height: 40px;
     width: 5px;
-    margin-right: 12px;
+    margin-inline: 12px;
     background: #F8D442;
     border: 3px solid #F8D442
 }
@@ -119,3 +119,9 @@ input:focus{
   right: 0;
 }
 
+.end-10{
+ right: 10px;
+}
+.start-10{
+  left: 10px;
+}

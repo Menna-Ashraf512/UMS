@@ -1,17 +1,19 @@
 <!-- layout.component.html -->
-<div class="layout">
+<div class="layout"  [attr.dir]="direction">
     <div class="sidebar" *ngIf="isSidebarOpen">
         <app-side-bar></app-side-bar>
     </div>
-    <button class="btn" (click)="toggleSidebar()"><i
+    <div class="btn_sideBar">
+        <button class="btn rounded-circle mt-3 mx-2" (click)="toggleSidebar()"><i 
             [class]="isSidebarOpen?'bi bi-chevron-double-left':'bi bi-chevron-double-right'"></i></button>
+    </div>
     <div class="content" [class.full-width]="!isSidebarOpen">
         <div class="navBar">
             <div class="d-flex justify-content-between align-items-center h-100 px-5">
                 <span class="back" routerLink="/users/userList"><i class="bi bi-arrow-left-circle fs-5"></i></span>
                 <div class="d-flex gap-4 align-items-center">
                     <div class="search border py-2 rounded-3 px-3">
-                        <input type="search" placeholder="search....">
+                        <input type="search" [placeholder]="'search'|translate" [(ngModel)]="searchText" (keyup.enter)="onEnterSearch()" (ngModelChange)="onSearchChange()">
                         <i class="bi bi-search"></i>
                     </div>
                     <i class="bi bi-bell fs-5"></i>

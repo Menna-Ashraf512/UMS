@@ -1,10 +1,12 @@
 {
+  "nameProject":"نظام إدارة المستخدمين",
   "login": "تسجيل دخول",
   "header": "أدخل بيانات الخاصة بك للوصول إلى حسابك",
   "userName": "اسم المستخدم",
   "placeholderUserName": "أدخل اسم المستخدم الخاص بك",
   "password": "كلمة المرور",
   "placeholderPassword": "أدخل كلمة المرور الخاصة بك",
+  "search":"بحث",
   "errors": {
     "requiredUsername": "اسم المستخدم مطلوب",
     "invalidUsername": "يرجى إدخال اسم مستخدم صالح",

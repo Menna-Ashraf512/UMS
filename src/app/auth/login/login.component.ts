@@ -12,6 +12,7 @@ import { AuthServiceService } from 'src/app/services/auth/auth-service.service';
 })
 export class LoginComponent {
   lang:string='en'
+  isShowPass=false;
   loginForm = new FormGroup({
     username: new FormControl(null, [Validators.required]),
     password: new FormControl(null, [
@@ -49,5 +50,11 @@ export class LoginComponent {
   changeLang(){
     this.lang = this.lang === "ar"?"en":"ar"
     this.translate.use(this.lang)
+  }
+    get direction() {
+    return this.lang === 'ar' ? 'rtl' : 'ltr';
+  }
+  showPass(){
+    this.isShowPass=!this.isShowPass
   }
 }

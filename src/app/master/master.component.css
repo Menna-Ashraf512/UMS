@@ -7,9 +7,12 @@
   width: 230px;
   background-color: #fff;
 }
-.btn{
+.btn_sideBar{
   background: #F2EAE1;
   border-radius: 0px;
+  & .btn{
+    background: #FEAF00;
+  }
 }
 .sidebar:hover{
   background: #000;
@@ -56,6 +59,7 @@
 }
 
 .flipswitch-label {
+  direction: ltr;
   display: block;
   overflow: hidden;
   cursor: pointer;

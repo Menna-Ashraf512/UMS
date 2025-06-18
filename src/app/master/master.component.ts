@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { SearchService } from '../services/search.service';
 
 @Component({
   selector: 'app-master',
@@ -9,7 +10,12 @@ import { TranslateService } from '@ngx-translate/core';
 export class MasterComponent {
   isSidebarOpen = true;
   lang: string = 'en';
-  constructor(private translate: TranslateService) {
+  searchText = '';
+
+  constructor(
+    private translate: TranslateService,
+    private searchService: SearchService
+  ) {
     translate.setDefaultLang(this.lang);
     this.translate.use(this.lang);
   }
@@ -21,4 +27,20 @@ export class MasterComponent {
     this.lang = this.lang === 'ar' ? 'en' : 'ar';
     this.translate.use(this.lang);
   }
+  get direction() {
+    return this.lang === 'ar' ? 'rtl' : 'ltr';
+  }
+
+onSearchChange() {
+  const trimmed = this.searchText.trim();
+  if (!trimmed) {
+    this.searchService.setSearchTerm('');
+  }
+}
+
+onEnterSearch() {
+  const trimmed = this.searchText.trim();
+
+  this.searchService.setSearchTerm(trimmed);
+}
 }

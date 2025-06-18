@@ -25,4 +25,7 @@ export class UserServiceService {
     DeleteUserById(id:number):Observable<any>{
    return this._httpClient.delete(`${this.baseUrl}user/${id}`)
   }
+
+
+  
 }
